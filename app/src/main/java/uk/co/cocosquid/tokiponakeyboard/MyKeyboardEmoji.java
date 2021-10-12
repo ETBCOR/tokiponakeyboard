@@ -143,9 +143,6 @@ public class MyKeyboardEmoji extends MyKeyboardAbstract {
 
         setDeleteListener(keys[27]);
 
-        // Set colours
-        setColours();
-
         // Set key listeners
         for (Button key : keys) {
             key.setOnClickListener(this);
@@ -191,6 +188,24 @@ public class MyKeyboardEmoji extends MyKeyboardAbstract {
         shortcuts = res.getStringArray(R.array.shortcuts_emoji);
         words = res.getStringArray(R.array.words_emoji);
         unofficialWords = res.getStringArray(R.array.unofficial_words_emoji);
+        altWords = res.getStringArray(R.array.alt_words);
+
+        // Load colors
+        switch (sharedPreferences.getString("themes", "default")) {
+            case "default":
+                colours = res.getIntArray(R.array.default_colours);
+                break;
+            case "light":
+                colours = res.getIntArray(R.array.light_colours);
+                break;
+            case "dark":
+                colours = res.getIntArray(R.array.dark_colours);
+                break;
+        }
+
+        // Set colours
+        //setColours();
+
     }
 
     protected void action(String startKey, String endKey) {
@@ -334,108 +349,6 @@ public class MyKeyboardEmoji extends MyKeyboardAbstract {
             currentShortcut = "";
             setLayout("");
         }
-    }
-
-    public void loadPreferences() {
-        setColours();
-    }
-
-    public void setColours() {
-        switch (sharedPreferences.getString("themes", "default")) {
-            case "default":
-
-                // Set colours
-                letterKeyColour = 0xFFbfd5ff;
-                commonWordKeyColour = 0xFF7fffd4;
-                specialKeyColour = 0xFF6f95df;
-
-                letterKeyTextColour = 0xFFffffff;
-                commonWordKeyTextColour = 0xFF00947f;
-                specialKeyTextColour = 0xFFffffff;
-
-                lastStateKeyColour = 0xFF7fffd4;
-                intermediateKeyColour = 0xFF00947f;
-                lastStateUnofficialKeyColour = 0xFFff947f;
-                intermediateUnofficialKeyColour = 0xFFff4f3f;
-
-                lastStateKeyTextColour = 0xFF00947f;
-                intermediateTextKeyColour = 0xFF7fffd4;
-                lastStateUnofficialKeyTextColour = 0xFFff4f3f;
-                intermediateTextUnofficialKeyColour = 0xFFff947f;
-
-                backgroundColour = 0xFF7faaff;
-                break;
-            case "light":
-
-                // Set colours
-                letterKeyColour = 0xFFffffff;
-                commonWordKeyColour = 0xFF7faaff;
-                specialKeyColour = 0xFFc0c0c0;
-
-                letterKeyTextColour = 0xFF101010;
-                commonWordKeyTextColour = 0xFFffffff;
-                specialKeyTextColour = 0xFF101010;
-
-                lastStateKeyColour = 0xFF7faaff;
-                intermediateKeyColour = 0xFF2E40A4;
-                lastStateUnofficialKeyColour = 0xFFff3f80;
-                intermediateUnofficialKeyColour = 0xFFaf1767;
-
-                lastStateKeyTextColour = 0xFFffffff;
-                intermediateTextKeyColour = 0xFFffffff;
-                lastStateUnofficialKeyTextColour = 0xFFffffff;
-                intermediateTextUnofficialKeyColour = 0xFFffffff;
-
-                backgroundColour = 0xFFe0e0e0;
-                break;
-            case "dark":
-
-                // Set colours
-                letterKeyColour = 0xFF202020;
-                commonWordKeyColour = 0xFF405580;
-                specialKeyColour = 0xFF101010;
-
-                letterKeyTextColour = 0xFFe0e0e0;
-                commonWordKeyTextColour = 0xFFffffff;
-                specialKeyTextColour = 0xFFe0e0e0;
-
-                lastStateKeyColour = 0xFF405580;
-                intermediateKeyColour = 0xFF172052;
-                lastStateUnofficialKeyColour = 0xFF802040;
-                intermediateUnofficialKeyColour = 0xFF580C34;
-
-                lastStateKeyTextColour = 0xFFffffff;
-                intermediateTextKeyColour = 0xFFffffff;
-                lastStateUnofficialKeyTextColour = 0xFFffffff;
-                intermediateTextUnofficialKeyColour = 0xFFffffff;
-
-                backgroundColour = 0xFF000000;
-                break;
-        }
-        for (int i = 0; i < keys.length; i++) {
-            // Set base colours
-            if (i < 14) {
-
-                // Letter keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(letterKeyColour));
-                keys[i].setTextColor(letterKeyTextColour);
-
-            } else if (i < 22) {
-
-                // Common word keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(commonWordKeyColour));
-                keys[i].setTextColor(commonWordKeyTextColour);
-
-            } else {
-
-                // Special keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(specialKeyColour));
-                keys[i].setTextColor(specialKeyTextColour);
-            }
-        }
-
-        // Set background colour
-        findViewById(R.id.keyboard_emoji).setBackgroundColor(backgroundColour);
     }
 
     public void updateCurrentState() {

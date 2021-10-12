@@ -38,6 +38,7 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
     protected String[] shortcuts;
     protected String[] words;
     protected String[] unofficialWords;
+    protected String[] altWords;
 
     // Word construction
     protected int quoteNestingLevel = 0;
@@ -53,25 +54,7 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
     SharedPreferences sharedPreferences;
 
     // Colours
-    protected int letterKeyColour;
-    protected int commonWordKeyColour;
-    protected int specialKeyColour;
-
-    protected int letterKeyTextColour;
-    protected int commonWordKeyTextColour;
-    protected int specialKeyTextColour;
-
-    protected int lastStateKeyColour;
-    protected int intermediateKeyColour;
-    protected int lastStateUnofficialKeyColour;
-    protected int intermediateUnofficialKeyColour;
-
-    protected int lastStateKeyTextColour;
-    protected int intermediateTextKeyColour;
-    protected int lastStateUnofficialKeyTextColour;
-    protected int intermediateTextUnofficialKeyColour;
-
-    protected int backgroundColour;
+    protected int[] colours;
 
     protected Button[] keys = new Button[28];
 
@@ -291,6 +274,15 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
         return false;
     }
 
+    protected boolean isAlt(String word) {
+        for (String altWord : altWords) {
+            if (altWord.equals(word)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void loadPreferences() {
         setColours();
     }
@@ -302,77 +294,30 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
     }
 
     public void setColours() {
-        switch (sharedPreferences.getString("themes", "default")) {
-            case "default":
+        for (int i = 0; i < keys.length; i++) {
+            // Set base colours
+            if (i < 14) {
 
-                // Set colours
-                letterKeyColour = 0xFFbfd5ff;
-                commonWordKeyColour = 0xFF7fffd4;
-                specialKeyColour = 0xFF6f95df;
+                // Letter keys
+                keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[0]));
+                keys[i].setTextColor(colours[1]);
 
-                letterKeyTextColour = 0xFFffffff;
-                commonWordKeyTextColour = 0xFF00947f;
-                specialKeyTextColour = 0xFFffffff;
+            } else if (i < 22) {
 
-                lastStateKeyColour = 0xFF7fffd4;
-                intermediateKeyColour = 0xFF00947f;
-                lastStateUnofficialKeyColour = 0xFFff947f;
-                intermediateUnofficialKeyColour = 0xFFff4f3f;
+                // Common word keys
+                keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[2]));
+                keys[i].setTextColor(colours[3]);
 
-                lastStateKeyTextColour = 0xFF00947f;
-                intermediateTextKeyColour = 0xFF7fffd4;
-                lastStateUnofficialKeyTextColour = 0xFFff4f3f;
-                intermediateTextUnofficialKeyColour = 0xFFff947f;
+            } else {
 
-                backgroundColour = 0xFF7faaff;
-                break;
-            case "light":
-
-                // Set colours
-                letterKeyColour = 0xFFffffff;
-                commonWordKeyColour = 0xFF7faaff;
-                specialKeyColour = 0xFFc0c0c0;
-
-                letterKeyTextColour = 0xFF101010;
-                commonWordKeyTextColour = 0xFFffffff;
-                specialKeyTextColour = 0xFF101010;
-
-                lastStateKeyColour = 0xFF7faaff;
-                intermediateKeyColour = 0xFF2E40A4;
-                lastStateUnofficialKeyColour = 0xFFff3f80;
-                intermediateUnofficialKeyColour = 0xFFaf1767;
-
-                lastStateKeyTextColour = 0xFFffffff;
-                intermediateTextKeyColour = 0xFFffffff;
-                lastStateUnofficialKeyTextColour = 0xFFffffff;
-                intermediateTextUnofficialKeyColour = 0xFFffffff;
-
-                backgroundColour = 0xFFe0e0e0;
-                break;
-            case "dark":
-
-                // Set colours
-                letterKeyColour = 0xFF202020;
-                commonWordKeyColour = 0xFF405580;
-                specialKeyColour = 0xFF101010;
-
-                letterKeyTextColour = 0xFFe0e0e0;
-                commonWordKeyTextColour = 0xFFffffff;
-                specialKeyTextColour = 0xFFe0e0e0;
-
-                lastStateKeyColour = 0xFF405580;
-                intermediateKeyColour = 0xFF172052;
-                lastStateUnofficialKeyColour = 0xFF802040;
-                intermediateUnofficialKeyColour = 0xFF580C34;
-
-                lastStateKeyTextColour = 0xFFffffff;
-                intermediateTextKeyColour = 0xFFffffff;
-                lastStateUnofficialKeyTextColour = 0xFFffffff;
-                intermediateTextUnofficialKeyColour = 0xFFffffff;
-
-                backgroundColour = 0xFF000000;
-                break;
+                // Special keys
+                keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[4]));
+                keys[i].setTextColor(colours[5]);
+            }
         }
+
+        // Set background colour
+        findViewById(R.id.keyboard).setBackgroundColor(colours[18]);
     }
 
     public void setEditorInfo(EditorInfo ei) {
@@ -405,11 +350,14 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 
                 // Set the colours
                 if (isUnofficial(keyText)) {
-                    key.setBackgroundTintList(ColorStateList.valueOf(lastStateUnofficialKeyColour));
-                    key.setTextColor(lastStateUnofficialKeyTextColour);
+                    key.setBackgroundTintList(ColorStateList.valueOf(colours[14]));
+                    key.setTextColor(colours[15]);
+                } else if (isAlt(keyText)) {
+                    key.setBackgroundTintList(ColorStateList.valueOf(colours[10]));
+                    key.setTextColor(colours[11]);
                 } else {
-                    key.setBackgroundTintList(ColorStateList.valueOf(lastStateKeyColour));
-                    key.setTextColor(lastStateKeyTextColour);
+                    key.setBackgroundTintList(ColorStateList.valueOf(colours[6]));
+                    key.setTextColor(colours[7]);
                 }
 
             } else if (doesShortcutExist(finishShortcut(potentialShortcut))) {
@@ -421,18 +369,21 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
                     // Key is on intermediate state
                     // Set the colours
                     if (isUnofficial(keyText)) {
-                        key.setBackgroundTintList(ColorStateList.valueOf(intermediateUnofficialKeyColour));
-                        key.setTextColor(intermediateTextUnofficialKeyColour);
+                        key.setBackgroundTintList(ColorStateList.valueOf(colours[16]));
+                        key.setTextColor(colours[17]);
+                    } else if (isAlt(keyText)) {
+                        key.setBackgroundTintList(ColorStateList.valueOf(colours[12]));
+                        key.setTextColor(colours[13]);
                     } else {
-                        key.setBackgroundTintList(ColorStateList.valueOf(intermediateKeyColour));
-                        key.setTextColor(intermediateTextKeyColour);
+                        key.setBackgroundTintList(ColorStateList.valueOf(colours[8]));
+                        key.setTextColor(colours[9]);
                     }
                 } else {
 
                     // Key is on base state
                     // Set the colours
-                    key.setBackgroundTintList(ColorStateList.valueOf(letterKeyColour));
-                    key.setTextColor(letterKeyTextColour);
+                    key.setBackgroundTintList(ColorStateList.valueOf(colours[0]));
+                    key.setTextColor(colours[1]);
                 }
             }
         }

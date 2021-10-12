@@ -1,129 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string-array name="shortcuts">
-        <item>ak</item>		<!-- akesi -->
-        <item>al</item>		<!-- alasa -->
-        <item>ae</item>		<!-- ale -->
-        <item>aa</item>		<!-- ali -->
-        <item>an</item>		<!-- anpa -->
-        <item>at</item>		<!-- ante -->
-        <item>au</item>		<!-- anu -->
-        <item>ap</item>		<!-- apeja -->
-        <item>aw</item>		<!-- awen -->
-        <item>ee</item>		<!-- en -->
-        <item>es</item>		<!-- esun -->
-        <item>ij</item>		<!-- ijo -->
-        <item>ii</item>		<!-- ike -->
-        <item>il</item>		<!-- ilo -->
-        <item>in</item>		<!-- insa -->
-        <item>ja</item>		<!-- jaki -->
-        <item>jj</item>		<!-- jan -->
-        <item>je</item>		<!-- jelo -->
-        <item>jo</item>		<!-- jo -->
-        <item>ka</item>		<!-- kala -->
-        <item>km</item>		<!-- kalama -->
-        <item>kk</item>		<!-- kama -->
-        <item>ks</item>		<!-- kasi -->
-        <item>ke</item>		<!-- ken -->
-        <item>kp</item>		<!-- kepeken -->
-        <item>kj</item>		<!-- kijetesantakalu -->
-        <item>kii</item>	<!-- kili -->
-        <item>kin</item>	<!-- kin -->
-        <item>kip</item>	<!-- kipisi -->
-        <item>kw</item>		<!-- kiwen -->
-        <item>ko</item>		<!-- ko -->
-        <item>kn</item>		<!-- kon -->
-        <item>ku</item>		<!-- kule -->
-        <item>kl</item>		<!-- kulupu -->
-        <item>kt</item>		<!-- kute -->
-        <item>ll</item>		<!-- la -->
-        <item>la</item>		<!-- lape -->
-        <item>ls</item>		<!-- laso -->
-        <item>lw</item>		<!-- lawa -->
-        <item>lek</item>	<!-- leko -->
-        <item>lee</item>	<!-- len -->
-        <item>lt</item>		<!-- lete -->
-        <item>lii</item>	<!-- lili -->
-        <item>lin</item>	<!-- linja -->
-        <item>lu</item>		<!-- lipu -->
-        <item>lj</item>		<!-- loje -->
-        <item>lo</item>		<!-- lon -->
-        <item>lk</item>		<!-- luka -->
-        <item>ln</item>		<!-- lukin -->
-        <item>lp</item>		<!-- lupa -->
-        <item>mm</item>		<!-- ma -->
-        <item>ma</item>		<!-- mama -->
-        <item>mi</item>		<!-- mani -->
-        <item>me</item>		<!-- meli -->
-        <item>mj</item>		<!-- mije -->
-        <item>mk</item>		<!-- moku -->
-        <item>ml</item>		<!-- moli -->
-        <item>moo</item>	<!-- monsi -->
-        <item>mon</item>	<!-- monsuta -->
-        <item>mu</item>		<!-- mu -->
-        <item>mn</item>		<!-- mun -->
-        <item>ms</item>		<!-- musi -->
-        <item>mt</item>		<!-- mute -->
-        <item>nm</item>		<!-- namako -->
-        <item>na</item>		<!-- nanpa -->
-        <item>ns</item>		<!-- nasa -->
-        <item>ni</item>		<!-- nasin -->
-        <item>ne</item>		<!-- nena -->
-        <item>nn</item>		<!-- nimi -->
-        <item>no</item>		<!-- noka -->
-        <item>oo</item>		<!-- o -->
-        <item tools:ignore="Typos">ok</item>		<!-- oko -->
-        <item>ol</item>		<!-- olin -->
-        <item>on</item>		<!-- ona -->
-        <item>op</item>		<!-- open -->
-        <item>pk</item>		<!-- pakala -->
-        <item>pe</item>		<!-- pake -->
-        <item>pl</item>		<!-- pali -->
-        <item>ps</item>		<!-- palisa -->
-        <item>pa</item>		<!-- pan -->
-        <item>pn</item>		<!-- pana -->
-        <item>pp</item>		<!-- pi -->
-        <item>pil</item>	<!-- pilin -->
-        <item>pm</item>		<!-- pimeja -->
-        <item>pii</item>	<!-- pini -->
-        <item>pip</item>	<!-- pipi -->
-        <item>poo</item>	<!-- poka -->
-        <item>pok</item>	<!-- poki -->
-        <item>pu</item>		<!-- pu -->
-        <item>sa</item>		<!-- sama -->
-        <item>sei</item>	<!-- seli -->
-        <item>seo</item>	<!-- selo -->
-        <item>sm</item>		<!-- seme -->
-        <item>see</item>	<!-- sewi -->
-        <item>sj</item>		<!-- sijelo -->
-        <item>sk</item>		<!-- sike -->
-        <item>si</item>		<!-- sin -->
-        <item>ss</item>		<!-- sina -->
-        <item>sp</item>		<!-- sinpin -->
-        <item>st</item>		<!-- sitelen -->
-        <item>sn</item>		<!-- sona -->
-        <item>sw</item>		<!-- soweli -->
-        <item>sl</item>		<!-- suli -->
-        <item>so</item>		<!-- suno -->
-        <item>sup</item>	<!-- supa -->
-        <item>suu</item>	<!-- suwi -->
-        <item>ta</item>		<!-- tan -->
-        <item>ts</item>		<!-- taso -->
-        <item>tt</item>		<!-- tawa -->
-        <item>te</item>		<!-- telo -->
-        <item>tn</item>		<!-- tenpo -->
-        <item>to</item>		<!-- tomo -->
-        <item>ti</item>		<!-- tonsi -->
-        <item>tu</item>		<!-- tu -->
-        <item>un</item>		<!-- unpa -->
-        <item>ut</item>		<!-- uta -->
-        <item>uu</item>		<!-- utala -->
-        <item>wl</item>		<!-- walo -->
-        <item>wn</item>		<!-- wan -->
-        <item>ws</item>		<!-- waso -->
-        <item>wa</item>		<!-- wawa -->
-        <item>we</item>		<!-- weka -->
-        <item>ww</item>		<!-- wile -->
+        <item>ak</item>        <!-- akesi -->
+        <item>al</item>        <!-- alasa -->
+        <item>aa</item>        <!-- ale -->
+        <item>ae</item>        <!-- ali -->
+        <item>an</item>        <!-- anpa -->
+        <item>at</item>        <!-- ante -->
+        <item>au</item>        <!-- anu -->
+        <item>ap</item>        <!-- apeja -->
+        <item>aw</item>        <!-- awen -->
+        <item>ee</item>        <!-- en -->
+        <item>ep</item>        <!-- epiku -->
+        <item>es</item>        <!-- esun -->
+        <item>et</item>        <!-- ete -->
+        <item>eu</item>        <!-- ete1 -->
+        <item>ew</item>        <!-- ewe -->
+        <item>ij</item>        <!-- ijo -->
+        <item>ii</item>        <!-- ike -->
+        <item>il</item>        <!-- ilo -->
+        <item>in</item>        <!-- insa -->
+        <item>is</item>        <!-- isipin -->
+        <item>jk</item>        <!-- jaki -->
+        <item>jj</item>        <!-- jan -->
+        <item>ja</item>        <!-- jasima -->
+        <item>je</item>        <!-- jelo -->
+        <item>jo</item>        <!-- jo -->
+        <item>kaa</item>    <!-- kala -->
+        <item>kaj</item>    <!-- kala1 -->
+        <item>km</item>        <!-- kalama -->
+        <item>kal</item>    <!-- kalamARR -->
+        <item>kk</item>        <!-- kama -->
+        <item>kaw</item>    <!-- kamalawala -->
+        <item>kan</item>    <!-- kan -->
+        <item>kap</item>    <!-- kapesi -->
+        <item>kao</item>    <!-- kapesi1 -->
+        <item>ks</item>        <!-- kasi -->
+        <item>keo</item>    <!-- ke -->
+        <item>kee</item>    <!-- ken -->
+        <item>kp</item>        <!-- kepeken -->
+        <item>kes</item>    <!-- kese -->
+        <item>kik</item>    <!-- kiki -->
+        <item>kjj</item>        <!-- kijetesantakalu -->
+        <item>kjk</item>        <!-- kijetesantakalun -->
+        <item>kjn</item>        <!-- kijetesantakaluw -->
+        <item>kjp</item>        <!-- kijetesantakalue -->
+        <item>kju</item>        <!-- kijetesantakalus -->
+        <item>kii</item>    <!-- kili -->
+        <item>kin</item>    <!-- kin -->
+        <item>kip</item>    <!-- kipisi -->
+        <item>kw</item>        <!-- kiwen -->
+        <item>koo</item>        <!-- ko -->
+        <item>kok</item>        <!-- kokosila -->
+        <item>koe</item>        <!-- kokosila1 -->
+        <item>kn</item>        <!-- kon -->
+        <item>kuu</item>        <!-- ku -->
+        <item>kus</item>        <!-- ku1 -->
+        <item>kut</item>        <!-- ku2 -->
+        <item>kun</item>        <!-- ku3 -->
+        <item>kuo</item>        <!-- ku4 -->
+        <item>kup</item>        <!-- ku5 -->
+        <item>kuw</item>        <!-- ku6 -->
+        <item>kul</item>        <!-- kule -->
+        <item>kl</item>    <!-- kulupu -->
+        <item>kum</item>    <!-- kuntu -->
+        <item>kt</item>        <!-- kute -->
+        <item>ll</item>        <!-- la -->
+        <item>lan</item>        <!-- lanpan -->
+        <item>laj</item>        <!-- lanpan1 -->
+        <item>laa</item>        <!-- lape -->
+        <item>ls</item>        <!-- laso -->
+        <item>lw</item>        <!-- lawa -->
+        <item>lek</item>    <!-- leko -->
+        <item>lee</item>    <!-- len -->
+        <item>lt</item>        <!-- lete -->
+        <item>lik</item>    <!-- likujo -->
+        <item>lii</item>    <!-- lili -->
+        <item>lin</item>    <!-- linja -->
+        <item>lie</item>    <!-- linluwi -->
+        <item>lu</item>        <!-- lipu -->
+        <item>lj</item>        <!-- loje -->
+        <item>lo</item>        <!-- lon -->
+        <item>lk</item>        <!-- luka -->
+        <item>ln</item>        <!-- lukin -->
+        <item>lp</item>        <!-- lupa -->
+        <item>mm</item>        <!-- ma -->
+        <item>mjn</item>    <!-- majuna -->
+        <item>maa</item>        <!-- mama -->
+        <item>man</item>        <!-- mani -->
+        <item>mee</item>        <!-- meli -->
+        <item>mea</item>        <!-- meli1 -->
+        <item>mes</item>        <!-- meso -->
+        <item>met</item>        <!-- meso1 -->
+        <item>mjj</item>    <!-- mije -->
+        <item>mja</item>    <!-- mije1 -->
+        <item>mii</item>        <!-- misa -->
+        <item>mia</item>        <!-- misa1 -->
+        <item>mie</item>        <!-- misa2 -->
+        <item>mij</item>        <!-- misa3 -->
+        <item>mik</item>        <!-- misa4 -->
+        <item>mil</item>        <!-- misa5 -->
+        <item>mis</item>        <!-- misikeke -->
+        <item>mk</item>        <!-- moku -->
+        <item>ml</item>        <!-- moli -->
+        <item>moo</item>    <!-- monsi -->
+        <item>mon</item>    <!-- monsuta -->
+        <item>mu</item>        <!-- mu -->
+        <item>mp</item>        <!-- mulapisu -->
+        <item>mn</item>        <!-- mun -->
+        <item>ms</item>        <!-- musi -->
+        <item>mt</item>        <!-- mute -->
+        <item>no</item>        <!-- n -->
+        <item>nm</item>        <!-- namako -->
+        <item>na</item>        <!-- nanpa -->
+        <item>ns</item>        <!-- nasa -->
+        <item>ni</item>        <!-- nasin -->
+        <item>nj</item>        <!-- neja -->
+        <item>ne</item>        <!-- nena -->
+        <item>nn</item>        <!-- nimi -->
+        <item>nk</item>        <!-- noka -->
+        <item>oo</item>        <!-- o -->
+        <item>ok</item>        <!-- oke -->
+        <item>oj</item>        <!-- oko -->
+        <item>ol</item>        <!-- olin -->
+        <item>oi</item>        <!-- olin1 -->
+        <item>on</item>        <!-- ona -->
+        <item>op</item>        <!-- open -->
+        <item>pk</item>        <!-- pakala -->
+        <item>pee</item>    <!-- pake -->
+        <item>pl</item>        <!-- pali -->
+        <item>ps</item>        <!-- palisa -->
+        <item>pa</item>        <!-- pan -->
+        <item>pn</item>        <!-- pana -->
+        <item>pj</item>        <!-- pata -->
+        <item>pet</item>    <!-- peto -->
+        <item>pp</item>        <!-- pi -->
+        <item>pil</item>    <!-- pilin -->
+        <item>pm</item>        <!-- pimeja -->
+        <item>pii</item>    <!-- pini -->
+        <item>pin</item>    <!-- Pingo -->
+        <item>pip</item>    <!-- pipi -->
+        <item>pon</item>    <!-- po -->
+        <item>poo</item>    <!-- poka -->
+        <item>pok</item>    <!-- poki -->
+        <item>pol</item>    <!-- polinpin -->
+        <item>pom</item>    <!-- pomotolo -->
+        <item>pow</item>    <!-- powe -->
+        <item>pu</item>        <!-- pu -->
+        <item>sa</item>        <!-- sama -->
+        <item>sen</item>       <!-- samu -->
+        <item>sei</item>       <!-- seli -->
+        <item>seo</item>       <!-- selo -->
+        <item>sm</item>        <!-- seme -->
+        <item>see</item>       <!-- sewi -->
+        <item>sea</item>       <!-- sewi1 -->
+        <item>sj</item>        <!-- sijelo -->
+        <item>sk</item>        <!-- sike -->
+        <item>si</item>        <!-- sin -->
+        <item>ss</item>        <!-- sina -->
+        <item>sp</item>        <!-- sinpin -->
+        <item>st</item>        <!-- sitelen -->
+        <item>soo</item>       <!-- soko -->
+        <item>sn</item>        <!-- sona -->
+        <item>sot</item>       <!-- soto -->
+        <item>sww</item>        <!-- soweli -->
+        <item>swk</item>        <!-- sowelin -->
+        <item>swn</item>        <!-- soweliw -->
+        <item>swp</item>        <!-- sowelie -->
+        <item>swu</item>        <!-- sowelis -->
+        <item>sl</item>        <!-- suli -->
+        <item>sun</item>        <!-- suno -->
+        <item>sup</item>    <!-- supa -->
+        <item>sut</item>    <!-- sutopatikuna -->
+        <item>suu</item>    <!-- suwi -->
+        <item>tkk</item>        <!-- taki -->
+        <item>tki</item>        <!-- taki1 -->
+        <item>ta</item>        <!-- tan -->
+        <item>ts</item>        <!-- taso -->
+        <item>tt</item>        <!-- tawa -->
+        <item>tp</item>    <!-- te -->
+        <item>tj</item>    <!-- teje -->
+        <item>te</item>        <!-- telo -->
+        <item>tn</item>        <!-- tenpo -->
+        <item>tw</item>    <!-- to -->
+        <item>to</item>        <!-- tomo -->
+        <item>ti</item>        <!-- tonsi -->
+        <item>tu</item>        <!-- tu -->
+        <item>tl</item>        <!-- tuli -->
+        <item>up</item>        <!-- unpa -->
+        <item>un</item>        <!-- unu -->
+        <item>us</item>        <!-- usawi -->
+        <item>ut</item>        <!-- uta -->
+        <item>uw</item>        <!-- uta1 -->
+        <item>uu</item>        <!-- utala -->
+        <item>wo</item>        <!-- wa -->
+        <item>wl</item>        <!-- walo -->
+        <item>wj</item>        <!-- waleja -->
+        <item>wn</item>        <!-- wan -->
+        <item>wss</item>        <!-- waso -->
+        <item>wsk</item>        <!-- wason -->
+        <item>wsn</item>        <!-- wasow -->
+        <item>wsp</item>        <!-- wasoe -->
+        <item>wsu</item>        <!-- wasos -->
+        <item>wa</item>        <!-- wawa -->
+        <item>we</item>        <!-- weka -->
+        <item>ww</item>        <!-- wile -->
+        <item>wp</item>        <!-- wile1 -->
+        <item>uk</item>        <!-- yupekosi -->
 
         <item>a%</item>
         <item>ala%</item>
@@ -135,7 +218,7 @@
         <item>toki%</item>
 
         <item>[%</item>
-        <item>“%</item>
+        <item>\"%</item>
         <item>.%</item>
         <item>\?%</item>
 
@@ -154,40 +237,73 @@
         <item>apeja</item>
         <item>awen</item>
         <item>en</item>
+        <item>epiku</item>
         <item>esun</item>
+        <item>ete</item>
+        <item>ete1</item>
+        <item>ewe</item>
         <item>ijo</item>
         <item>ike</item>
         <item>ilo</item>
         <item>insa</item>
+        <item>isipin</item>
         <item>jaki</item>
         <item>jan</item>
+        <item>jasima</item>
         <item>jelo</item>
         <item>jo</item>
         <item>kala</item>
+        <item>kala1</item>
         <item>kalama</item>
+        <item>kalamARR</item>
         <item>kama</item>
+        <item>kamalawala</item>
+        <item>kan</item>
+        <item>kapesi</item>
+        <item>kapesi1</item>
         <item>kasi</item>
+        <item>ke</item>
         <item>ken</item>
         <item>kepeken</item>
+        <item>kese</item>
+        <item>kiki</item>
         <item>kijetesantakalu</item>
+        <item>kijetesantakalun</item>
+        <item>kijetesantakaluw</item>
+        <item>kijetesantakalue</item>
+        <item>kijetesantakalus</item>
         <item>kili</item>
         <item>kin</item>
         <item>kipisi</item>
         <item>kiwen</item>
         <item>ko</item>
+        <item>kokosila</item>
+        <item>kokosila1</item>
         <item>kon</item>
+        <item>ku</item>
+        <item>ku1</item>
+        <item>ku2</item>
+        <item>ku3</item>
+        <item>ku4</item>
+        <item>ku5</item>
+        <item>ku6</item>
         <item>kule</item>
         <item>kulupu</item>
+        <item>kuntu</item>
         <item>kute</item>
         <item>la</item>
+        <item>lanpan</item>
+        <item>lanpan1</item>
         <item>lape</item>
         <item>laso</item>
         <item>lawa</item>
         <item>leko</item>
         <item>len</item>
         <item>lete</item>
+        <item>likujo</item>
         <item>lili</item>
         <item>linja</item>
+        <item>linluwi</item>
         <item>lipu</item>
         <item>loje</item>
         <item>lon</item>
@@ -195,28 +311,45 @@
         <item>lukin</item>
         <item>lupa</item>
         <item>ma</item>
+        <item>majuna</item>
         <item>mama</item>
         <item>mani</item>
         <item>meli</item>
+        <item>meli1</item>
+        <item>meso</item>
+        <item>meso1</item>
         <item>mije</item>
+        <item>mije1</item>
+        <item>misa</item>
+        <item>misa1</item>
+        <item>misa2</item>
+        <item>misa3</item>
+        <item>misa4</item>
+        <item>misa5</item>
+        <item>misikeke</item>
         <item>moku</item>
         <item>moli</item>
         <item>monsi</item>
         <item>monsuta</item>
         <item>mu</item>
+        <item>mulapisu</item>
         <item>mun</item>
         <item>musi</item>
         <item>mute</item>
+        <item>n</item>
         <item>namako</item>
         <item>nanpa</item>
         <item>nasa</item>
         <item>nasin</item>
+        <item>neja</item>
         <item>nena</item>
         <item>nimi</item>
         <item>noka</item>
         <item>o</item>
+        <item>oke</item>
         <item>oko</item>
         <item>olin</item>
+        <item>olin1</item>
         <item>ona</item>
         <item>open</item>
         <item>pakala</item>
@@ -225,48 +358,81 @@
         <item>palisa</item>
         <item>pan</item>
         <item>pana</item>
+        <item>pata</item>
+        <item>peto</item>
         <item>pi</item>
         <item>pilin</item>
         <item>pimeja</item>
         <item>pini</item>
+        <item>Pingo</item>
         <item>pipi</item>
+        <item>po</item>
         <item>poka</item>
         <item>poki</item>
+        <item>polinpin</item>
+        <item>pomotolo</item>
+        <item>powe</item>
         <item>pu</item>
         <item>sama</item>
+        <item>samu</item>
         <item>seli</item>
         <item>selo</item>
         <item>seme</item>
         <item>sewi</item>
+        <item>sewi1</item>
         <item>sijelo</item>
         <item>sike</item>
         <item>sin</item>
         <item>sina</item>
         <item>sinpin</item>
         <item>sitelen</item>
+        <item>soko</item>
         <item>sona</item>
+        <item>soto</item>
         <item>soweli</item>
+        <item>sowelin</item>
+        <item>soweliw</item>
+        <item>sowelie</item>
+        <item>sowelis</item>
         <item>suli</item>
         <item>suno</item>
         <item>supa</item>
+        <item>sutopatikuna</item>
         <item>suwi</item>
+        <item>taki</item>
+        <item>taki1</item>
         <item>tan</item>
         <item>taso</item>
         <item>tawa</item>
+        <item>te</item>
+        <item>teje</item>
         <item>telo</item>
         <item>tenpo</item>
+        <item>to</item>
         <item>tomo</item>
         <item>tonsi</item>
         <item>tu</item>
+        <item>tuli</item>
         <item>unpa</item>
+        <item>unu</item>
+        <item>usawi</item>
         <item>uta</item>
+        <item>uta1</item>
         <item>utala</item>
+        <item>wa</item>
         <item>walo</item>
+        <item>waleja</item>
         <item>wan</item>
         <item>waso</item>
+        <item>wason</item>
+        <item>wasow</item>
+        <item>wasoe</item>
+        <item>wasos</item>
         <item>wawa</item>
         <item>weka</item>
         <item>wile</item>
+        <item>wile1</item>
+        <item>yupekosi</item>
 
         <item>a</item>
         <item>ala</item>
@@ -278,7 +444,7 @@
         <item>toki</item>
 
         <item>[]</item>
-        <item>“</item>
+        <item>\"</item>
         <item>.</item>
         <item>\?</item>
 
@@ -287,17 +453,87 @@
     </string-array>
 
     <string-array name="unofficial_words">
-        <item>ale</item>
+        <item>ali</item>
         <item>apeja</item>
-        <item>kijetesantakalu</item>
-        <item>kin</item>
-        <item>kipisi</item>
+        <item>ete</item>
+        <item>ewe</item>
+        <item>isipin</item>
+        <item>kalamARR</item>
+        <item>kamalawala</item>
+        <item>kan</item>
+        <item>kapesi</item>
+        <item>ke</item>
+        <item>kese</item>
+        <item>kiki</item>
+        <item>kuntu</item>
+        <item>likujo</item>
+        <item>linluwi</item>
         <item>majuna</item>
-        <item>monsuta</item>
-        <item>namako</item>
-        <item>oko</item>
+        <item>misa</item>
+        <item>mulapisu</item>
+        <item>neja</item>
+        <item>oke</item>
         <item>pake</item>
-        <item>tonsi</item>
+        <item>pata</item>
+        <item>peto</item>
+        <item>Pingo</item>
+        <item>po</item>
+        <item>polinpin</item>
+        <item>pomotolo</item>
+        <item>powe</item>
+        <item>samu</item>
+        <item>soto</item>
+        <item>sutopatikuna</item>
+        <item>taki</item>
+        <item>te</item>
+        <item>teje</item>
+        <item>to</item>
+        <item>tuli</item>
+        <item>unu</item>
+        <item>usawi</item>
+        <item>wa</item>
+        <item>waleja</item>
+        <item>yupekosi</item>
+
+    </string-array>
+
+    <string-array name="alt_words">
+        <item>ete1</item>
+        <item>kala1</item>
+        <item>kapesi1</item>
+        <item>kokosila1</item>
+        <item>ku1</item>
+        <item>ku2</item>
+        <item>ku3</item>
+        <item>ku4</item>
+        <item>ku5</item>
+        <item>ku6</item>
+        <item>lanpan1</item>
+        <item>meli1</item>
+        <item>meso1</item>
+        <item>mije1</item>
+        <item>misa1</item>
+        <item>misa2</item>
+        <item>misa3</item>
+        <item>misa4</item>
+        <item>misa5</item>
+        <item>olin1</item>
+        <item>sewi1</item>
+        <item>taki1</item>
+        <item>uta1</item>
+        <item>wile1</item>
+        <item>sowelin</item>
+        <item>soweliw</item>
+        <item>sowelie</item>
+        <item>sowelis</item>
+        <item>wason</item>
+        <item>wasow</item>
+        <item>wasoe</item>
+        <item>wasos</item>
+        <item>kijetesantakalun</item>
+        <item>kijetesantakaluw</item>
+        <item>kijetesantakalue</item>
+        <item>kijetesantakalus</item>
     </string-array>
 
     <!-- Setting arrays -->

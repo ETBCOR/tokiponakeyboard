@@ -73,9 +73,6 @@ public class MyKeyboard extends MyKeyboardAbstract {
 
         setDeleteListener(keys[27]);
 
-        // Set colours
-        setColours();
-
         // Set key listeners
         for (Button key : keys) {
             key.setOnClickListener(this);
@@ -110,7 +107,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
 
         keyValues.put(R.id.bracket, "%[");
         keyValues.put(R.id.dot, "%.");
-        keyValues.put(R.id.quote, "%“");
+        keyValues.put(R.id.quote, "%\"");
         keyValues.put(R.id.question, "%?");
         keyValues.put(R.id.enter, "%enter");
 
@@ -121,6 +118,24 @@ public class MyKeyboard extends MyKeyboardAbstract {
         shortcuts = res.getStringArray(R.array.shortcuts);
         words = res.getStringArray(R.array.words);
         unofficialWords = res.getStringArray(R.array.unofficial_words);
+        altWords = res.getStringArray(R.array.alt_words);
+
+        // Load colors
+        switch (sharedPreferences.getString("themes", "default")) {
+            case "default":
+                colours = res.getIntArray(R.array.default_colours);
+                break;
+            case "light":
+                colours = res.getIntArray(R.array.light_colours);
+                break;
+            case "dark":
+                colours = res.getIntArray(R.array.dark_colours);
+                break;
+        }
+
+        // Set colours
+//        setColours();
+
     }
 
     protected void action(String startKey, String endKey) {
@@ -128,9 +143,9 @@ public class MyKeyboard extends MyKeyboardAbstract {
 
             // Single key sent
             boolean nothingWritten = false;
-            if (getPreviousCharacter().equals("“") && !getNextCharacter().isEmpty() && !getNextCharacter().equals("”") && !startKey.equals("%“") && !startKey.equals("%delete") && !startKey.equals("%enter")) {
+            /*if (getPreviousCharacter().equals("“") && !getNextCharacter().isEmpty() && !getNextCharacter().equals("”") && !startKey.equals("%“") && !startKey.equals("%delete") && !startKey.equals("%enter")) {
                 suffix = " ";
-            }
+            }*/
             if (startKey.charAt(0) == '%') {
 
                 // Special key sent
@@ -166,8 +181,8 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             setBracket(true);
                         }
                         break;
-                    case "%“":
-                        if (quoteNestingLevel > 0) {
+                    /*case "%\"":
+                        /* if (quoteNestingLevel > 0) {
                             write("”");
                             if (!",.:?!\n".contains(getNextCharacter()) && !getNextCharacter().isEmpty()) {
                                 write(" ");
@@ -179,6 +194,8 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             }
                         }
                         break;
+                    */
+                    case "%\"":
                     case "%.":
                     case "%?":
                         write(Character.toString(startKey.charAt(1)));
@@ -247,15 +264,8 @@ public class MyKeyboard extends MyKeyboardAbstract {
                         case "%[":
                             write(",");
                             break;
-                        case "%“":
-                            if (quoteNestingLevel > 0) {
-                                writeShortcut("“%");
-                                if (getNextCharacter().equals(" ")) {
-                                    inputConnection.deleteSurroundingText(0, 1);
-                                }
-                            } else {
-                                action(startKey, null);
-                            }
+                        case "%\"":
+                            // If previous word has a varient, cycle through it
                             break;
                         case "%.":
                             write(":");
@@ -411,10 +421,6 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
     }
 
-    public void loadPreferences() {
-        setColours();
-    }
-
     public void setBracket(boolean newInBrackets) {
         inBrackets = newInBrackets;
         if (inBrackets) {
@@ -422,34 +428,6 @@ public class MyKeyboard extends MyKeyboardAbstract {
         } else {
             ((Button) findViewById(R.id.bracket)).setText("[");
         }
-    }
-
-    public void setColours() {
-        super.setColours();
-        for (int i = 0; i < keys.length; i++) {
-            // Set base colours
-            if (i < 14) {
-
-                // Letter keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(letterKeyColour));
-                keys[i].setTextColor(letterKeyTextColour);
-
-            } else if (i < 22) {
-
-                // Common word keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(commonWordKeyColour));
-                keys[i].setTextColor(commonWordKeyTextColour);
-
-            } else {
-
-                // Special keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(specialKeyColour));
-                keys[i].setTextColor(specialKeyTextColour);
-            }
-        }
-
-        // Set background colour
-        findViewById(R.id.keyboard).setBackgroundColor(backgroundColour);
     }
 
     public void updateCurrentState() {
@@ -504,12 +482,12 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
 
         // Ensure the correct quote is on the key
-        updateQuoteNestedLevel();
+        /* updateQuoteNestedLevel();
         if (quoteNestingLevel > 0) {
             ((Button) findViewById(R.id.quote)).setText("”");
         } else {
             ((Button) findViewById(R.id.quote)).setText("“");
-        }
+        } */
     }
 
     private void write(String toWrite) {

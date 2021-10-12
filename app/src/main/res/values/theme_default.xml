@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="default_colours">
+        <item>0xFFbfd5ff</item><!--letter_key 00-->
+        <item>0xFFffffff</item><!--letter_text 01-->
+
+        <item>0xFF7fffd4</item><!--common_key 02-->
+        <item>0xFF00947f</item><!--common_text 03-->
+
+        <item>0xFF6f95df</item><!--special_key 04-->
+        <item>0xFFffffff</item><!--special_text 05-->
+
+        <item>0xFF7fffd4</item><!--finisher_key 06-->
+        <item>0xFF00947f</item><!--finisher_text 07-->
+
+        <item>0xFF00947f</item><!--intermediate_key 08-->
+        <item>0xFF7fffd4</item><!--intermediate_text 09-->
+
+        <item>0xFFb4ff7f</item><!--finisher_alt_key 10-->
+        <item>0xFF3e9400</item><!--finisher_alt_text 11-->
+
+        <item>0xFF3e9400</item><!--intermediate_alt_key 12-->
+        <item>0xFFb4ff7f</item><!--intermediate_alt_text 13-->
+
+        <item>0xFFff2814</item><!--finisher_unofficial_key 14-->
+        <item>0xFFff947f</item><!--finisher_unofficial_text 15-->
+
+        <item>0xFFff947f</item><!--intermediate_unofficial_key 16-->
+        <item>0xFFff2814</item><!--intermediate_unofficial_text 17-->
+
+        <item>0xFF7faaff</item><!--background 18-->
+    </integer-array>
+
+    <integer-array name="light_colours">
+        <item>0xFFffffff</item><!--letter_key 00-->
+        <item>0xFF101010</item><!--letter_text 01-->
+
+        <item>0xFF7faaff</item><!--common_key 02-->
+        <item>0xFFffffff</item><!--common_text 03-->
+
+        <item>0xFFc0c0c0</item><!--special_key 04-->
+        <item>0xFF101010</item><!--special_text 05-->
+
+        <item>0xFF7faaff</item><!--finisher_key 06-->
+        <item>0xFFffffff</item><!--finisher_text 07-->
+
+        <item>0xFF2E40A4</item><!--intermediate_key 08-->
+        <item>0xFFffffff</item><!--intermediate_text 09-->
+
+        <item>0xFFb4ff7f</item><!--finisher_alt_key 10-->
+        <item>0xFF3e9400</item><!--finisher_alt_text 11-->
+
+        <item>0xFF3e9400</item><!--intermediate_alt_key 12-->
+        <item>0xFFb4ff7f</item><!--intermediate_alt_text 13-->
+
+        <item>0xFFff3f80</item><!--finisher_unofficial_key 14-->
+        <item>0xFFffffff</item><!--finisher_unofficial_text 15-->
+
+        <item>0xFFaf1767</item><!--intermediate_unofficial_key 16-->
+        <item>0xFFffffff</item><!--intermediate_unofficial_text 17-->
+
+        <item>0xFFe0e0e0</item><!--background 18-->
+    </integer-array>
+
+    <integer-array name="dark_colours">
+        <item>0xFF202020</item><!--letter_key 00-->
+        <item>0xFFe0e0e0</item><!--letter_text 01-->
+
+        <item>0xFF405580</item><!--common_key 02-->
+        <item>0xFFffffff</item><!--common_text 03-->
+
+        <item>0xFF101010</item><!--special_key 04-->
+        <item>0xFFe0e0e0</item><!--special_text 05-->
+
+        <item>0xFF405580</item><!--finisher_key 06-->c
+        <item>0xFFffffff</item><!--finisher_text 07-->
+
+        <item>0xFF172052</item><!--intermediate_key 08-->
+        <item>0xFFffffff</item><!--intermediate_text 09-->
+
+        <item>0xFFb4ff7f</item><!--finisher_alt_key 10-->
+        <item>0xFF3e9400</item><!--finisher_alt_text 11-->
+
+        <item>0xFF3e9400</item><!--intermediate_alt_key 12-->
+        <item>0xFFb4ff7f</item><!--intermediate_alt_text 13-->
+
+        <item>0xFF802040</item><!--finisher_unofficial_key 14-->
+        <item>0xFFffffff</item><!--finisher_unofficial_text 15-->
+
+        <item>0xFF580C34</item><!--intermediate_unofficial_key 16-->
+        <item>0xFFffffff</item><!--intermediate_unofficial_text 17-->
+
+        <item>0xFF000000</item><!--background 18-->
+    </integer-array>
+
+</resources>

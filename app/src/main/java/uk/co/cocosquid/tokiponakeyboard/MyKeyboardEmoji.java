@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -191,20 +192,31 @@ public class MyKeyboardEmoji extends MyKeyboardAbstract {
         altWords = res.getStringArray(R.array.alt_words);
 
         // Load colors
+        TypedArray theme_default = context.getResources().obtainTypedArray(R.array.theme_default);
+        TypedArray theme_light = context.getResources().obtainTypedArray(R.array.theme_light);
+        TypedArray theme_dark = context.getResources().obtainTypedArray(R.array.theme_dark);
+
+        TypedArray selected_theme;
+
         switch (sharedPreferences.getString("themes", "default")) {
             case "default":
-                colours = res.getIntArray(R.array.default_colours);
-                break;
+                selected_theme = theme_default; break;
+            //colours = res.getIntArray(R.array.default_colors);
             case "light":
-                colours = res.getIntArray(R.array.light_colours);
-                break;
+                selected_theme = theme_light; break;
+            //colours = res.getIntArray(R.array.light_colours);
             case "dark":
-                colours = res.getIntArray(R.array.dark_colours);
-                break;
+                selected_theme = theme_dark; break;
+            //colours = res.getIntArray(R.array.dark_colours);
+            default:
+                selected_theme = theme_default; break;
         }
 
+        for (int i = 0; i < 19; i++)
+            colours[i] = selected_theme.getColor(i, 0);
+
         // Set colours
-        //setColours();
+        setColours();
 
     }
 

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -122,18 +123,30 @@ public class MyKeyboard extends MyKeyboardAbstract {
         altWords = res.getStringArray(R.array.alt_words);
 
         // Load colors
-        /*switch (sharedPreferences.getString("themes", "default")) {
+        TypedArray theme_default = context.getResources().obtainTypedArray(R.array.theme_default);
+        TypedArray theme_light = context.getResources().obtainTypedArray(R.array.theme_light);
+        TypedArray theme_dark = context.getResources().obtainTypedArray(R.array.theme_dark);
+
+        TypedArray selected_theme;
+
+        switch (sharedPreferences.getString("themes", "default")) {
             case "default":
-                //colours[0] = res.getValue(R.color.letter_key);
-                break;
+                selected_theme = theme_default; break;
+                //colours = res.getIntArray(R.array.default_colors);
             case "light":
+                selected_theme = theme_light; break;
                 //colours = res.getIntArray(R.array.light_colours);
-                break;
             case "dark":
+                selected_theme = theme_dark; break;
                 //colours = res.getIntArray(R.array.dark_colours);
-                break;
-        }*/
-        colours[0] = ResourcesCompat.getColor(getResources(), R.color.letter_key, null);
+            default:
+                selected_theme = theme_default; break;
+        }
+
+        for (int i = 0; i < 19; i++)
+            colours[i] = selected_theme.getColor(i, 0);
+
+        /*colours[0] = ResourcesCompat.getColor(getResources(), R.color.letter_key, null);
         colours[1] = ResourcesCompat.getColor(getResources(), R.color.letter_text, null);
         colours[2] = ResourcesCompat.getColor(getResources(), R.color.common_key, null);
         colours[3] = ResourcesCompat.getColor(getResources(), R.color.common_text, null);
@@ -151,7 +164,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         colours[15] = ResourcesCompat.getColor(getResources(), R.color.finisher_unofficial_text, null);
         colours[16] = ResourcesCompat.getColor(getResources(), R.color.intermediate_unofficial_key, null);
         colours[17] = ResourcesCompat.getColor(getResources(), R.color.intermediate_unofficial_text, null);
-        colours[18] = ResourcesCompat.getColor(getResources(), R.color.background, null);
+        colours[18] = ResourcesCompat.getColor(getResources(), R.color.background, null);*/
 
         // Set colours
         setColours();

@@ -7,6 +7,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Rect;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -18,6 +19,9 @@ import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import java.io.IOError;
+import java.io.IOException;
 
 public abstract class MyKeyboardAbstract extends LinearLayout implements View.OnLongClickListener, View.OnClickListener {
 
@@ -54,7 +58,7 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
     SharedPreferences sharedPreferences;
 
     // Colours
-    protected int[] colours;
+    protected int[] colours = new int[19];
 
     protected Button[] keys = new Button[28];
 
@@ -299,26 +303,47 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
             if (i < 14) {
 
                 // Letter keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(this.colours[0]));
-                keys[i].setTextColor(this.colours[1]);
-
+                try {
+                    keys[i].setBackgroundTintList(ColorStateList.valueOf(this.colours[0]));
+                    keys[i].setTextColor(this.colours[1]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return;
+                }
 
             } else if (i < 22) {
 
                 // Common word keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[2]));
-                keys[i].setTextColor(this.colours[3]);
+                try {
+                    keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[2]));
+                    keys[i].setTextColor(this.colours[3]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return;
+                }
 
             } else {
 
                 // Special keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[4]));
-                keys[i].setTextColor(this.colours[5]);
+                try {
+                    keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[4]));
+                    keys[i].setTextColor(this.colours[5]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return;
+                }
+
+
             }
         }
 
         // Set background colour
-        findViewById(R.id.keyboard).setBackgroundColor(this.colours[18]);
+        try {
+            findViewById(R.id.keyboard).setBackgroundColor(this.colours[18]);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
     }
 
     public void setEditorInfo(EditorInfo ei) {

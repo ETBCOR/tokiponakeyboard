@@ -24,7 +24,7 @@
 
         <ListPreference
             app:key="themes"
-            app:title="Theme"
+            app:title="nasin kule"
             app:entries="@array/theme_names"
             app:entryValues="@array/themes"
             app:defaultValue="default"
@@ -36,9 +36,13 @@
         app:key="behaviour_category"
         app:title="Behaviour">
 «
-        <SwitchPreferenceCompat
-            app:key="emoji_mode"
-            app:title="Enable sitelen Emoji mode" />
+        <ListPreference
+            app:key="output_mode"
+            app:title="nasin sitelen"
+            app:entries="@array/output_names"
+            app:entryValues="@array/outputs"
+            app:defaultValue="latin"
+            app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 

@@ -13,7 +13,7 @@ import android.widget.Button;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.preference.PreferenceManager;
 
-public class MyKeyboard extends MyKeyboardAbstract
+public class MyKeyboardUnicode extends MyKeyboardAbstract
 {
 	
 	// Word construction
@@ -21,17 +21,17 @@ public class MyKeyboard extends MyKeyboardAbstract
 	private String compoundFirstWordShortcut = "";
 	private String suffix = "";
 	
-	public MyKeyboard(Context context)
+	public MyKeyboardUnicode(Context context)
 	{
 		this(context, null, 0);
 	}
 	
-	public MyKeyboard(Context context, AttributeSet attrs)
+	public MyKeyboardUnicode(Context context, AttributeSet attrs)
 	{
 		this(context, attrs, 0);
 	}
 	
-	public MyKeyboard(Context context, AttributeSet attrs, int defStyleAttr)
+	public MyKeyboardUnicode(Context context, AttributeSet attrs, int defStyleAttr)
 	{
 		super(context, attrs, defStyleAttr);
 		init(context);

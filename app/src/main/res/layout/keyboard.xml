@@ -16,6 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/li"
             android:textAllCaps="false" />
@@ -26,6 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/mi"
             android:textAllCaps="false" />
@@ -36,6 +38,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/bracket"
             android:textAllCaps="false" />
@@ -46,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/ali"
             android:textAllCaps="false" />
@@ -56,6 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/en"
             android:textAllCaps="false" />
@@ -66,6 +71,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/ike"
             android:textAllCaps="false" />
@@ -76,6 +82,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/dot"
             android:textAllCaps="false" />
@@ -93,6 +100,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/e"
             android:textAllCaps="false" />
@@ -103,6 +111,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/toki"
             android:textAllCaps="false" />
@@ -113,6 +122,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/quote"
             android:textAllCaps="false" />
@@ -123,6 +133,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/jan"
             android:textAllCaps="false" />
@@ -133,6 +144,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/kama"
             android:textAllCaps="false" />
@@ -143,6 +155,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/la"
             android:textAllCaps="false" />
@@ -153,6 +166,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/question"
             android:textAllCaps="false" />
@@ -170,6 +184,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/ni"
             android:textAllCaps="false" />
@@ -180,6 +195,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/pona"
             android:textAllCaps="false" />
@@ -190,6 +206,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/ma"
             android:textAllCaps="false" />
@@ -200,6 +217,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/nimi"
             android:textAllCaps="false" />
@@ -210,6 +228,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/o"
             android:textAllCaps="false" />
@@ -220,6 +239,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/pi"
             android:textAllCaps="false" />
@@ -230,6 +250,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/delete"
             android:textAllCaps="false" />
@@ -247,6 +268,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/a"
             android:textAllCaps="false" />
@@ -257,6 +279,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/ala"
             android:textAllCaps="false" />
@@ -267,6 +290,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/sina"
             android:textAllCaps="false" />
@@ -277,6 +301,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/tawa"
             android:textAllCaps="false" />
@@ -287,6 +312,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/utala"
             android:textAllCaps="false" />
@@ -297,6 +323,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/wile"
             android:textAllCaps="false" />
@@ -307,6 +334,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/linja_sike_5"
             android:text="@string/enter"
             android:textAllCaps="false" />

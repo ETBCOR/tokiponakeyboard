@@ -369,27 +369,25 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 	{
 		
 		// Load colors
-		TypedArray theme_default = context.getResources().obtainTypedArray(R.array.theme_default);
-		TypedArray theme_light = context.getResources().obtainTypedArray(R.array.theme_light);
-		TypedArray theme_dark = context.getResources().obtainTypedArray(R.array.theme_dark);
-		
-		TypedArray selected_theme;
-		
+		TypedArray theme;
 		switch (sharedPreferences.getString("themes", "default"))
 		{
 			case "light":
-				selected_theme = theme_light;
+				theme = context.getResources().obtainTypedArray(R.array.theme_light);
 				break;
 			case "dark":
-				selected_theme = theme_dark;
+				theme = context.getResources().obtainTypedArray(R.array.theme_dark);
+				break;
+			case "kalama_sin":
+				theme = context.getResources().obtainTypedArray(R.array.theme_kalama_sin);
 				break;
 			default:
-				selected_theme = theme_default;
+				theme = context.getResources().obtainTypedArray(R.array.theme_default);
 				break;
 		}
 		
 		for (int i = 0; i < 19; i++)
-			colours[i] = selected_theme.getColor(i, 0);
+			colours[i] = theme.getColor(i, 0);
 		
 		setColours();
 	}

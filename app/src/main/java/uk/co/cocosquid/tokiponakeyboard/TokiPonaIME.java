@@ -28,6 +28,7 @@ public class TokiPonaIME extends InputMethodService
 		
 		keyboard = getLayoutInflater().inflate(R.layout.keyboard_wrapper, null).findViewById(R.id.keyboard);
 		keyboardEmoji = getLayoutInflater().inflate(R.layout.keyboard_wrapper_emoji, null).findViewById(R.id.keyboard_emoji);
+		keyboardUnicode = getLayoutInflater().inflate(R.layout.keyboard_wrapper_unicode, null).findViewById(R.id.keyboard_unicode);
 		
 		switch (mode)
 		{
@@ -107,14 +108,17 @@ public class TokiPonaIME extends InputMethodService
 			case LATIN:
 				mode = outputMode.EMOJI;
 				keyboardEmoji.updateCurrentState();
+				setInputView(keyboardEmoji);
 				break;
 			case EMOJI:
 				mode = outputMode.UNICODE;
 				keyboardUnicode.updateCurrentState();
+				setInputView(keyboardUnicode);
 				break;
 			case UNICODE:
 				mode = outputMode.LATIN;
 				keyboard.updateCurrentState();
+				setInputView(keyboard);
 				break;
 		}
 	}

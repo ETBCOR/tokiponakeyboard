@@ -234,6 +234,7 @@ public class MyKeyboard extends MyKeyboardAbstract
 						}
 						inputMethodService.cycleMode();
 						
+						
 					}
 					else
 					{

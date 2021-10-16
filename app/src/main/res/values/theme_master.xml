@@ -16,17 +16,17 @@
         <item>#FF00947f</item><!--intermediate_key 08-->
         <item>#FF7fffd4</item><!--intermediate_text 09-->
 
-        <item>#FFb4ff7f</item><!--finisher_alt_key 10-->
-        <item>#FF3e9400</item><!--finisher_alt_text 11-->
+        <item>#FFff2814</item><!--finisher_alt_key 10-->
+        <item>#FFff947f</item><!--finisher_alt_text 11-->
 
-        <item>#FF3e9400</item><!--intermediate_alt_key 12-->
-        <item>#FFb4ff7f</item><!--intermediate_alt_text 13-->
+        <item>#FFff947f</item><!--intermediate_alt_key 12-->
+        <item>#FFff2814</item><!--intermediate_alt_text 13-->
 
-        <item>#FFff2814</item><!--finisher_unofficial_key 14-->
-        <item>#FFff947f</item><!--finisher_unofficial_text 15-->
+        <item>#FFb4ff7f</item><!--finisher_unofficial_key 14-->
+        <item>#FF3e9400</item><!--finisher_unofficial_text 15-->
 
-        <item>#FFff947f</item><!--intermediate_unofficial_key 16-->
-        <item>#FFff2814</item><!--intermediate_unofficial_text 17-->
+        <item>#FF3e9400</item><!--intermediate_unofficial_key 16-->
+        <item>#FFb4ff7f</item><!--intermediate_unofficial_text 17-->
 
         <item>#FF7faaff</item><!--background 18-->
     </array>
@@ -47,16 +47,16 @@
         <item>#FF2E40A4</item><!--intermediate_key 08-->
         <item>#FFffffff</item><!--intermediate_text 09-->
 
-        <item>#FFb4ff7f</item><!--finisher_alt_key 10-->
-        <item>#FF3e9400</item><!--finisher_alt_text 11-->
+        <item>#FFff3f80</item><!--finisher_alt_key 10-->
+        <item>#FFffffff</item><!--finisher_alt_text 11-->
 
-        <item>#FF3e9400</item><!--intermediate_alt_key 12-->
-        <item>#FFb4ff7f</item><!--intermediate_alt_text 13-->
+        <item>#FFaf1767</item><!--intermediate_alt_key 12-->
+        <item>#FFffffff</item><!--intermediate_alt_text 13-->
 
-        <item>#FFff3f80</item><!--finisher_unofficial_key 14-->
-        <item>#FFffffff</item><!--finisher_unofficial_text 15-->
+        <item>#FFb4ff7f</item><!--finisher_unofficial_key 14-->
+        <item>#FF000000</item><!--finisher_unofficial_text 15-->
 
-        <item>#FFaf1767</item><!--intermediate_unofficial_key 16-->
+        <item>#FF3e9400</item><!--intermediate_unofficial_key 16-->
         <item>#FFffffff</item><!--intermediate_unofficial_text 17-->
 
         <item>#FFe0e0e0</item><!--background 18-->
@@ -78,18 +78,49 @@
         <item>#FF172052</item><!--intermediate_key 08-->
         <item>#FFffffff</item><!--intermediate_text 09-->
 
-        <item>#FFb4ff7f</item><!--finisher_alt_key 10-->
-        <item>#FF3e9400</item><!--finisher_alt_text 11-->
+        <item>#FF802040</item><!--finisher_alt_key 10-->
+        <item>#FFffffff</item><!--finisher_alt_text 11-->
 
-        <item>#FF3e9400</item><!--intermediate_alt_key 12-->
-        <item>#FFb4ff7f</item><!--intermediate_alt_text 13-->
+        <item>#FF580C34</item><!--intermediate_alt_key 12-->
+        <item>#FFffffff</item><!--intermediate_alt_text 13-->
 
-        <item>#FF802040</item><!--finisher_unofficial_key 14-->
-        <item>#FFffffff</item><!--finisher_unofficial_text 15-->
+        <item>#FFb4ff7f</item><!--finisher_unofficial_key 14-->
+        <item>#FF000000</item><!--finisher_unofficial_text 15-->
 
-        <item>#FF580C34</item><!--intermediate_unofficial_key 16-->
+        <item>#FF3e9400</item><!--intermediate_unofficial_key 16-->
         <item>#FFffffff</item><!--intermediate_unofficial_text 17-->
 
         <item>#FF000000</item><!--background 18-->
+    </array>
+
+    <array name="theme_kalama_sin">
+        <item>#FF202020</item><!--letter_key 00-->
+        <item>#FFe0e0e0</item><!--letter_text 01-->
+
+        <item>#FF819BCE</item><!--common_key 02-->
+        <item>#FFffffff</item><!--common_text 03-->
+
+        <item>#FF101010</item><!--special_key 04-->
+        <item>#FFe0e0e0</item><!--special_text 05-->
+
+        <item>#871658</item><!--finisher_key 06-->
+        <item>#FFffffff</item><!--finisher_text 07-->
+
+        <item>#FF29406C</item><!--intermediate_key 08-->
+        <item>#FFffffff</item><!--intermediate_text 09-->
+
+        <item>#8A4F7D</item><!--finisher_alt_key 10-->
+        <item>#FFffffff</item><!--finisher_alt_text 11-->
+
+        <item>#FF4D183F</item><!--intermediate_alt_key 12-->
+        <item>#FFffffff</item><!--intermediate_alt_text 13-->
+
+        <item>#FFB7E0D2</item><!--finisher_unofficial_key 14-->
+        <item>#FF000000</item><!--finisher_unofficial_text 15-->
+
+        <item>#FF69968E</item><!--intermediate_unofficial_key 16-->
+        <item>#FF000000</item><!--intermediate_unofficial_text 17-->
+
+        <item>#FF4D193F</item><!--background 18-->
     </array>
 </resources>

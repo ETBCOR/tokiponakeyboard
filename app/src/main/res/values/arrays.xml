@@ -538,14 +538,16 @@
 
     <!-- Setting arrays -->
     <string-array name="theme_names">
+        <item>walo</item>
         <item>meso</item>
-        <item>suno</item>
         <item>pimeja</item>
+        <item>kalama sin</item>
     </string-array>
     <string-array name="themes">
-        <item>default</item>
         <item>light</item>
+        <item>default</item>
         <item>dark</item>
+        <item>kalama_sin</item>
     </string-array>
 
     <string-array name="output_names">

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.Button;
 
+import androidx.core.content.res.ResourcesCompat;
 import androidx.preference.PreferenceManager;
 
 public class MyKeyboard extends MyKeyboardAbstract {
@@ -121,20 +122,39 @@ public class MyKeyboard extends MyKeyboardAbstract {
         altWords = res.getStringArray(R.array.alt_words);
 
         // Load colors
-        switch (sharedPreferences.getString("themes", "default")) {
+        /*switch (sharedPreferences.getString("themes", "default")) {
             case "default":
-                colours = res.getIntArray(R.array.default_colours);
+                //colours[0] = res.getValue(R.color.letter_key);
                 break;
             case "light":
-                colours = res.getIntArray(R.array.light_colours);
+                //colours = res.getIntArray(R.array.light_colours);
                 break;
             case "dark":
-                colours = res.getIntArray(R.array.dark_colours);
+                //colours = res.getIntArray(R.array.dark_colours);
                 break;
-        }
+        }*/
+        colours[0] = ResourcesCompat.getColor(getResources(), R.color.letter_key, null);
+        colours[1] = ResourcesCompat.getColor(getResources(), R.color.letter_text, null);
+        colours[2] = ResourcesCompat.getColor(getResources(), R.color.common_key, null);
+        colours[3] = ResourcesCompat.getColor(getResources(), R.color.common_text, null);
+        colours[4] = ResourcesCompat.getColor(getResources(), R.color.special_key, null);
+        colours[5] = ResourcesCompat.getColor(getResources(), R.color.special_text, null);
+        colours[6] = ResourcesCompat.getColor(getResources(), R.color.finisher_key, null);
+        colours[7] = ResourcesCompat.getColor(getResources(), R.color.finisher_text, null);
+        colours[8] = ResourcesCompat.getColor(getResources(), R.color.intermediate_key, null);
+        colours[9] = ResourcesCompat.getColor(getResources(), R.color.intermediate_text, null);
+        colours[10] = ResourcesCompat.getColor(getResources(), R.color.finisher_alt_key, null);
+        colours[11] = ResourcesCompat.getColor(getResources(), R.color.finisher_alt_text, null);
+        colours[12] = ResourcesCompat.getColor(getResources(), R.color.intermediate_alt_key, null);
+        colours[13] = ResourcesCompat.getColor(getResources(), R.color.intermediate_alt_text, null);
+        colours[14] = ResourcesCompat.getColor(getResources(), R.color.finisher_unofficial_key, null);
+        colours[15] = ResourcesCompat.getColor(getResources(), R.color.finisher_unofficial_text, null);
+        colours[16] = ResourcesCompat.getColor(getResources(), R.color.intermediate_unofficial_key, null);
+        colours[17] = ResourcesCompat.getColor(getResources(), R.color.intermediate_unofficial_text, null);
+        colours[18] = ResourcesCompat.getColor(getResources(), R.color.background, null);
 
         // Set colours
-//        setColours();
+        setColours();
 
     }
 

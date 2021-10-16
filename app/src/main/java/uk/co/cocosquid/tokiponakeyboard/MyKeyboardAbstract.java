@@ -299,25 +299,26 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
             if (i < 14) {
 
                 // Letter keys
-                keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[0]));
-                keys[i].setTextColor(colours[1]);
+                keys[i].setBackgroundTintList(ColorStateList.valueOf(this.colours[0]));
+                keys[i].setTextColor(this.colours[1]);
+
 
             } else if (i < 22) {
 
                 // Common word keys
                 keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[2]));
-                keys[i].setTextColor(colours[3]);
+                keys[i].setTextColor(this.colours[3]);
 
             } else {
 
                 // Special keys
                 keys[i].setBackgroundTintList(ColorStateList.valueOf(colours[4]));
-                keys[i].setTextColor(colours[5]);
+                keys[i].setTextColor(this.colours[5]);
             }
         }
 
         // Set background colour
-        findViewById(R.id.keyboard).setBackgroundColor(colours[18]);
+        findViewById(R.id.keyboard).setBackgroundColor(this.colours[18]);
     }
 
     public void setEditorInfo(EditorInfo ei) {
@@ -350,14 +351,14 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 
                 // Set the colours
                 if (isUnofficial(keyText)) {
-                    key.setBackgroundTintList(ColorStateList.valueOf(colours[14]));
-                    key.setTextColor(colours[15]);
+                    key.setBackgroundTintList(ColorStateList.valueOf(this.colours[14]));
+                    key.setTextColor(this.colours[15]);
                 } else if (isAlt(keyText)) {
-                    key.setBackgroundTintList(ColorStateList.valueOf(colours[10]));
-                    key.setTextColor(colours[11]);
+                    key.setBackgroundTintList(ColorStateList.valueOf(this.colours[10]));
+                    key.setTextColor(this.colours[11]);
                 } else {
-                    key.setBackgroundTintList(ColorStateList.valueOf(colours[6]));
-                    key.setTextColor(colours[7]);
+                    key.setBackgroundTintList(ColorStateList.valueOf(this.colours[6]));
+                    key.setTextColor(this.colours[7]);
                 }
 
             } else if (doesShortcutExist(finishShortcut(potentialShortcut))) {
@@ -369,21 +370,21 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
                     // Key is on intermediate state
                     // Set the colours
                     if (isUnofficial(keyText)) {
-                        key.setBackgroundTintList(ColorStateList.valueOf(colours[16]));
-                        key.setTextColor(colours[17]);
+                        key.setBackgroundTintList(ColorStateList.valueOf(this.colours[16]));
+                        key.setTextColor(this.colours[17]);
                     } else if (isAlt(keyText)) {
-                        key.setBackgroundTintList(ColorStateList.valueOf(colours[12]));
-                        key.setTextColor(colours[13]);
+                        key.setBackgroundTintList(ColorStateList.valueOf(this.colours[12]));
+                        key.setTextColor(this.colours[13]);
                     } else {
-                        key.setBackgroundTintList(ColorStateList.valueOf(colours[8]));
-                        key.setTextColor(colours[9]);
+                        key.setBackgroundTintList(ColorStateList.valueOf(this.colours[8]));
+                        key.setTextColor(this.colours[9]);
                     }
                 } else {
 
                     // Key is on base state
                     // Set the colours
-                    key.setBackgroundTintList(ColorStateList.valueOf(colours[0]));
-                    key.setTextColor(colours[1]);
+                    key.setBackgroundTintList(ColorStateList.valueOf(this.colours[0]));
+                    key.setTextColor(this.colours[1]);
                 }
             }
         }

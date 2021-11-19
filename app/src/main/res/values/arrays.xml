@@ -41,11 +41,7 @@
         <item>kp</item>        <!-- kepeken -->
         <item>kes</item>    <!-- kese -->
         <item>kik</item>    <!-- kiki -->
-        <item>kjj</item>        <!-- kijetesantakalu -->
-        <item>kjk</item>        <!-- kijetesantakalun -->
-        <item>kjn</item>        <!-- kijetesantakaluw -->
-        <item>kjp</item>        <!-- kijetesantakalue -->
-        <item>kju</item>        <!-- kijetesantakalus -->
+        <item>kj</item>        <!-- kijetesantakalu -->
         <item>kii</item>    <!-- kili -->
         <item>kin</item>    <!-- kin -->
         <item>kip</item>    <!-- kipisi -->
@@ -55,12 +51,6 @@
         <item>koe</item>        <!-- kokosila1 -->
         <item>kn</item>        <!-- kon -->
         <item>kuu</item>        <!-- ku -->
-        <item>kus</item>        <!-- ku1 -->
-        <item>kut</item>        <!-- ku2 -->
-        <item>kun</item>        <!-- ku3 -->
-        <item>kuo</item>        <!-- ku4 -->
-        <item>kup</item>        <!-- ku5 -->
-        <item>kuw</item>        <!-- ku6 -->
         <item>kul</item>        <!-- kule -->
         <item>kl</item>    <!-- kulupu -->
         <item>kum</item>    <!-- kuntu -->
@@ -95,11 +85,6 @@
         <item>mjj</item>    <!-- mije -->
         <item>mja</item>    <!-- mije1 -->
         <item>mii</item>        <!-- misa -->
-        <item>mia</item>        <!-- misa1 -->
-        <item>mie</item>        <!-- misa2 -->
-        <item>mij</item>        <!-- misa3 -->
-        <item>mik</item>        <!-- misa4 -->
-        <item>mil</item>        <!-- misa5 -->
         <item>mis</item>        <!-- misikeke -->
         <item>mk</item>        <!-- moku -->
         <item>ml</item>        <!-- moli -->
@@ -120,8 +105,8 @@
         <item>nn</item>        <!-- nimi -->
         <item>nk</item>        <!-- noka -->
         <item>oo</item>        <!-- o -->
-        <item>ok</item>        <!-- oke -->
-        <item>oj</item>        <!-- oko -->
+        <item>oj</item>        <!-- oke -->
+        <item>ok</item>        <!-- oko -->
         <item>ol</item>        <!-- olin -->
         <item>oi</item>        <!-- olin1 -->
         <item>on</item>        <!-- ona -->
@@ -163,11 +148,7 @@
         <item>soo</item>       <!-- soko -->
         <item>sn</item>        <!-- sona -->
         <item>sot</item>       <!-- soto -->
-        <item>sww</item>        <!-- soweli -->
-        <item>swk</item>        <!-- sowelin -->
-        <item>swn</item>        <!-- soweliw -->
-        <item>swp</item>        <!-- sowelie -->
-        <item>swu</item>        <!-- sowelis -->
+        <item>sw</item>        <!-- soweli -->
         <item>sl</item>        <!-- suli -->
         <item>sun</item>        <!-- suno -->
         <item>sup</item>    <!-- supa -->
@@ -197,11 +178,7 @@
         <item>wl</item>        <!-- walo -->
         <item>wj</item>        <!-- waleja -->
         <item>wn</item>        <!-- wan -->
-        <item>wss</item>        <!-- waso -->
-        <item>wsk</item>        <!-- wason -->
-        <item>wsn</item>        <!-- wasow -->
-        <item>wsp</item>        <!-- wasoe -->
-        <item>wsu</item>        <!-- wasos -->
+        <item>ws</item>        <!-- waso -->
         <item>wa</item>        <!-- wawa -->
         <item>we</item>        <!-- weka -->
         <item>ww</item>        <!-- wile -->
@@ -268,10 +245,6 @@
         <item>kese</item>
         <item>kiki</item>
         <item>kijetesantakalu</item>
-        <item>kijetesantakalun</item>
-        <item>kijetesantakaluw</item>
-        <item>kijetesantakalue</item>
-        <item>kijetesantakalus</item>
         <item>kili</item>
         <item>kin</item>
         <item>kipisi</item>
@@ -281,12 +254,6 @@
         <item>kokosila1</item>
         <item>kon</item>
         <item>ku</item>
-        <item>ku1</item>
-        <item>ku2</item>
-        <item>ku3</item>
-        <item>ku4</item>
-        <item>ku5</item>
-        <item>ku6</item>
         <item>kule</item>
         <item>kulupu</item>
         <item>kuntu</item>
@@ -321,11 +288,6 @@
         <item>mije</item>
         <item>mije1</item>
         <item>misa</item>
-        <item>misa1</item>
-        <item>misa2</item>
-        <item>misa3</item>
-        <item>misa4</item>
-        <item>misa5</item>
         <item>misikeke</item>
         <item>moku</item>
         <item>moli</item>
@@ -390,10 +352,6 @@
         <item>sona</item>
         <item>soto</item>
         <item>soweli</item>
-        <item>sowelin</item>
-        <item>soweliw</item>
-        <item>sowelie</item>
-        <item>sowelis</item>
         <item>suli</item>
         <item>suno</item>
         <item>supa</item>
@@ -424,10 +382,6 @@
         <item>waleja</item>
         <item>wan</item>
         <item>waso</item>
-        <item>wason</item>
-        <item>wasow</item>
-        <item>wasoe</item>
-        <item>wasos</item>
         <item>wawa</item>
         <item>weka</item>
         <item>wile</item>
@@ -502,38 +456,15 @@
         <item>kala1</item>
         <item>kapesi1</item>
         <item>kokosila1</item>
-        <item>ku1</item>
-        <item>ku2</item>
-        <item>ku3</item>
-        <item>ku4</item>
-        <item>ku5</item>
-        <item>ku6</item>
         <item>lanpan1</item>
         <item>meli1</item>
         <item>meso1</item>
         <item>mije1</item>
-        <item>misa1</item>
-        <item>misa2</item>
-        <item>misa3</item>
-        <item>misa4</item>
-        <item>misa5</item>
         <item>olin1</item>
         <item>sewi1</item>
         <item>taki1</item>
         <item>uta1</item>
         <item>wile1</item>
-        <item>sowelin</item>
-        <item>soweliw</item>
-        <item>sowelie</item>
-        <item>sowelis</item>
-        <item>wason</item>
-        <item>wasow</item>
-        <item>wasoe</item>
-        <item>wasos</item>
-        <item>kijetesantakalun</item>
-        <item>kijetesantakaluw</item>
-        <item>kijetesantakalue</item>
-        <item>kijetesantakalus</item>
     </string-array>
 
     <!-- Setting arrays -->

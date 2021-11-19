@@ -45,10 +45,6 @@
     <string name ="kese">kese</string>
     <string name ="kiki">kiki</string>
     <string name ="kijetesantakalu">kijetesantakalu</string>
-    <string name ="kijetesantakalun">kijetesantakalun</string>
-    <string name ="kijetesantakaluw">kijetesantakaluw</string>
-    <string name ="kijetesantakalue">kijetesantakalue</string>
-    <string name ="kijetesantakalus">kijetesantakalus</string>
     <string name ="kili">kili</string>
     <string name ="kiwen">kiwen</string>
     <string name ="ko">ko</string>
@@ -56,12 +52,6 @@
     <string name ="kokosila1">kokosila1</string>
     <string name ="kon">kon</string>
     <string name ="ku">ku</string>
-    <string name ="ku1">ku1</string>
-    <string name ="ku2">ku2</string>
-    <string name ="ku3">ku3</string>
-    <string name ="ku4">ku4</string>
-    <string name ="ku5">ku5</string>
-    <string name ="ku6">ku6</string>
     <string name ="kule">kule</string>
     <string name ="kulupu">kulupu</string>
     <string name ="kuntu">kuntu</string>
@@ -97,11 +87,6 @@
     <string name ="mije">mije</string>
     <string name ="mije1">mije1</string>
     <string name ="misa">misa</string>
-    <string name ="misa1">misa1</string>
-    <string name ="misa2">misa2</string>
-    <string name ="misa3">misa3</string>
-    <string name ="misa4">misa4</string>
-    <string name ="misa5">misa5</string>
     <string name ="misikeke">misikeke</string>
     <string name ="moku">moku</string>
     <string name ="moli">moli</string>
@@ -166,10 +151,6 @@
     <string name ="sona">sona</string>
     <string name ="soto">soto</string>
     <string name ="soweli">soweli</string>
-    <string name ="sowelin">sowelin</string>
-    <string name ="soweliw">soweliw</string>
-    <string name ="sowelie">sowelie</string>
-    <string name ="sowelis">sowelis</string>
     <string name ="suli">suli</string>
     <string name ="suno">suno</string>
     <string name ="supa">supa</string>
@@ -200,10 +181,6 @@
     <string name ="waleja">waleja</string>
     <string name ="wan">wan</string>
     <string name ="waso">waso</string>
-    <string name ="wason">wason</string>
-    <string name ="wasow">wasow</string>
-    <string name ="wasoe">wasoe</string>
-    <string name ="wasos">wasos</string>
     <string name ="wawa">wawa</string>
     <string name ="wile">wile</string>
     <string name ="wile1">wile1</string>

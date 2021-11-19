@@ -541,8 +541,21 @@ public class MyKeyboard extends MyKeyboardAbstract
 		String compoundFirstWord = "";
 		if (!compoundFirstWordShortcut.isEmpty())
 		{
-			compoundFirstWord = getWord(compoundFirstWordShortcut) + "-";
+			compoundFirstWord = getWord(compoundFirstWordShortcut);
+			if (    (compoundFirstWord.equals("tenpo") && getWord(shortcut).equals("alasa")) ||
+					(compoundFirstWord.equals("tan") && getWord(shortcut).equals("ni")) ||
+					(compoundFirstWord.equals("kama") && getWord(shortcut).equals("tawa")))
+			{
+				compoundFirstWord += "++";
+			}
+			else
+			{
+				compoundFirstWord += "-";
+			}
 			compoundFirstWordShortcut = "";
+			
+			// ligatures check
+			
 		}
 		
 		write(wordSpacer + compoundFirstWord + getWord(shortcut));

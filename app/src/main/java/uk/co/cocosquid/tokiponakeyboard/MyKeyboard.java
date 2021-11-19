@@ -55,9 +55,7 @@ public class MyKeyboard extends MyKeyboardAbstract
 			
 			// Single key sent
 			boolean nothingWritten = false;
-            /*if (getPreviousCharacter().equals("“") && !getNextCharacter().isEmpty() && !getNextCharacter().equals("”") && !startKey.equals("%“") && !startKey.equals("%delete") && !startKey.equals("%enter")) {
-                suffix = " ";
-            }*/
+
 			if (startKey.charAt(0) == '%')
 			{
 				
@@ -205,13 +203,13 @@ public class MyKeyboard extends MyKeyboardAbstract
 					switch (startKey)
 					{
 						case "%[":
-							write(",");
+							//write(",");
 							break;
 						case "%\"":
-							// If previous word has a varient, cycle through it
+							write(":");
 							break;
 						case "%.":
-							write(":");
+							write(",");
 							break;
 						case "%?":
 							write("!");

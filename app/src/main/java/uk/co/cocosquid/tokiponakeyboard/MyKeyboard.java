@@ -50,24 +50,33 @@ public class MyKeyboard extends MyKeyboardAbstract
 	
 	protected void action(String startKey, String endKey)
 	{
+		// Check if single key or combo was sent
 		if (endKey == null)
 		{
 			
 			// Single key sent
 			boolean nothingWritten = false;
 
+			// Check what kind of key was sent
 			if (startKey.charAt(0) == '%')
 			{
 				
 				// Special key sent
+				
+				// Unless it's the delete key...
 				if (!startKey.equals("%delete"))
 				{
+					// Auto complete partial shortcut on special key
 					finishAction("finish");
+					
+					// Finish cartouche before writing special character
 					if (inBrackets && !startKey.equals("%]") && !startKey.equals("%["))
 					{
 						action("%]", null);
 					}
 				}
+				
+				// Decide what to do with the special key
 				switch (startKey)
 				{
 					case "%]":
@@ -107,7 +116,7 @@ public class MyKeyboard extends MyKeyboardAbstract
 							write(Character.toString(startKey.charAt(1)));
 							break;
 						}
-						else
+						else if (!cursorInQuotes())
 						{
 							// otherwise, determine if a space is needed
 							int quoteCount = 0;
@@ -170,7 +179,6 @@ public class MyKeyboard extends MyKeyboardAbstract
 						
 						// Word key sent
 						writeShortcut(startKey);
-						
 					}
 					else
 					{
@@ -189,8 +197,6 @@ public class MyKeyboard extends MyKeyboardAbstract
 		}
 		else
 		{
-			
-			// Two keys sent
 			if (startKey.charAt(0) == '%' || endKey.charAt(0) == '%')
 			{
 				

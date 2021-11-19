@@ -7,11 +7,14 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+
 public class MyKeyboard extends MyKeyboardAbstract
 {
 	
 	// Word construction
 	private boolean inBrackets = false;
+	private boolean openQuote = false;
 	private String compoundFirstWordShortcut = "";
 	private String suffix = "";
 	
@@ -98,21 +101,28 @@ public class MyKeyboard extends MyKeyboardAbstract
 							setBracket(true);
 						}
 						break;
-                    /*case "%\"":
-                        /* if (quoteNestingLevel > 0) {
-                            write("”");
-                            if (!",.:?!\n".contains(getNextCharacter()) && !getNextCharacter().isEmpty()) {
-                                write(" ");
-                            }
-                        } else {
-                            writeShortcut("“%");
-                            if (getNextCharacter().equals(" ")) {
-                                inputConnection.deleteSurroundingText(0, 1);
-                            }
-                        }
-                        break;
-                    */
+                    
 					case "%\"":
+						if (cursorAtStart())
+						{
+							// if we're at the start, just write the quote
+							write(Character.toString(startKey.charAt(1)));
+							break;
+						}
+						else
+						{
+							// otherwise, determine if a space is needed
+							int quoteCount = 0;
+							
+							for (int i = beforeCursorText.length() - 1; i >= 0; i--)
+							{
+								String currentString = Character.toString(beforeCursorText.charAt(i));
+								quoteCount += currentString.equals("\"") ? 1 : 0;
+							}
+							
+							// add space before the quote if it's needed
+							if(quoteCount % 2 == 0) write(" ");
+						}
 					case "%.":
 					case "%?":
 						write(Character.toString(startKey.charAt(1)));
@@ -269,8 +279,28 @@ public class MyKeyboard extends MyKeyboardAbstract
 		else
 		{
 			String previousCharacter = getPreviousCharacter();
-			return "\n“".contains(previousCharacter);
+			if (previousCharacter.equals("\n")) return true;
+			
+			else if (cursorInQuotes() && previousCharacter.equals("\""))
+			{
+				return true;
+			}
+			return false;
 		}
+	}
+	
+	private boolean cursorInQuotes()
+	{
+		updateTextInfo();
+		
+		int quoteCount = 0;
+		for (int i = beforeCursorText.length() - 1; i >= 0; i--)
+		{
+			String currentString = Character.toString(beforeCursorText.charAt(i));
+			quoteCount += currentString.equals("\"") ? 1 : 0;
+		}
+		return quoteCount % 2 != 0;
+		
 	}
 	
 	protected void delete()
@@ -280,27 +310,35 @@ public class MyKeyboard extends MyKeyboardAbstract
 			
 			// Delete some text
 			updateTextInfo();
+			
 			label:
 			for (int i = beforeCursorText.length() - 1; i >= 0; i--)
 			{
 				String currentString = Character.toString(beforeCursorText.charAt(i));
+				
 				switch (currentString)
 				{
-					case "\n":
-					case "“":
-						if (i == beforeCursorText.length() - 1)
+					case "\"":
+						if (cursorInQuotes() && i != beforeCursorText.length() - 1)
 						{
-							inputConnection.deleteSurroundingText(1, 0);
+							// the cursor is in quotes, and we aren't looking at the spot just to the left (there was something to delete)
+							inputConnection.deleteSurroundingText(beforeCursorText.length() - i - 1, 0);
+						}
+						else if (beforeCursorText.length() > 2 && beforeCursorText.charAt(i - 1) == ' ')
+						{
+							// delete extra space before quote
+							inputConnection.deleteSurroundingText(beforeCursorText.length() - i + 1, 0);
 						}
 						else
 						{
-							inputConnection.deleteSurroundingText(beforeCursorText.length() - i - 1, 0);
+							// normal delete
+							inputConnection.deleteSurroundingText(beforeCursorText.length() - i, 0);
 						}
 						break label;
+					case "\n":
 					case " ":
 					case "_":
 					case ",":
-					case "”":
 					case ".":
 					case ":":
 					case "?":
@@ -335,14 +373,14 @@ public class MyKeyboard extends MyKeyboardAbstract
 				}
 			}
 			
-			if ("% |“ ".contains(getAdjacentCharacters()))
+			/*if ("% |“ ".contains(getAdjacentCharacters()))
 			{
 				inputConnection.deleteSurroundingText(0, 1);
 			}
 			else if (" %|  | ,| ”| .| :| ?| !| \n".contains(getAdjacentCharacters()))
 			{
 				inputConnection.deleteSurroundingText(1, 0);
-			}
+			}*/
 		}
 		else
 		{
@@ -409,9 +447,10 @@ public class MyKeyboard extends MyKeyboardAbstract
 		String charOnLeft = getPreviousCharacter();
 		
 		boolean adjust = true;
-		if ("],”.:?!\n".contains(charOnLeft) || " _],”.:?!\n".contains(charOnRight))
+		
+		// check for characters that the cursor should be allowed to remain near
+		if ("],.:\"?!\n".contains(charOnLeft) || " _],.:\"?!\n".contains(charOnRight))
 		{
-			
 			// Do not adjust cursor position
 			adjust = false;
 		}
@@ -424,12 +463,6 @@ public class MyKeyboard extends MyKeyboardAbstract
 			String currentString = Character.toString(beforeCursorText.charAt(i));
 			switch (currentString)
 			{
-				case "“":
-					if (moveTo == 0)
-					{
-						moveTo = i + 1;
-					}
-					break;
 				case "\n":
 					if (moveTo == 0)
 					{
@@ -452,6 +485,7 @@ public class MyKeyboard extends MyKeyboardAbstract
 				break;
 			}
 		}
+		
 		if (adjust)
 		{
 			if (moveTo == 0)
@@ -483,7 +517,7 @@ public class MyKeyboard extends MyKeyboardAbstract
 		inputConnection.commitText(toWrite + suffix, 1);
 	}
 	
-	private void writeShortcut(String shortcut)
+	private void writeShortcut(@NonNull String shortcut)
 	{
 		
 		// Do not write anything if the shortcut is empty

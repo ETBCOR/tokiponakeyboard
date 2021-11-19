@@ -2,16 +2,10 @@ package uk.co.cocosquid.tokiponakeyboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.widget.Button;
-
-import androidx.core.content.res.ResourcesCompat;
-import androidx.preference.PreferenceManager;
 
 public class MyKeyboardUnicode extends MyKeyboardAbstract
 {
@@ -398,11 +392,11 @@ public class MyKeyboardUnicode extends MyKeyboardAbstract
 		inBrackets = newInBrackets;
 		if (inBrackets)
 		{
-			((Button) findViewById(R.id.bracket)).setText("]");
+			((Button) findViewById(R.id.btn22)).setText("]");
 		}
 		else
 		{
-			((Button) findViewById(R.id.bracket)).setText("[");
+			((Button) findViewById(R.id.btn22)).setText("[");
 		}
 	}
 	

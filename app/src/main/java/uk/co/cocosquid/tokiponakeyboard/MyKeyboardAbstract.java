@@ -8,7 +8,6 @@ import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -23,9 +22,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.preference.PreferenceManager;
-
-import java.io.IOError;
-import java.io.IOException;
 
 public abstract class MyKeyboardAbstract extends LinearLayout implements View.OnLongClickListener, View.OnClickListener
 {
@@ -464,37 +460,13 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 	public void setKeys()
 	{
 		// Set the keys
-		keys[0] = findViewById(R.id.ali);
-		keys[1] = findViewById(R.id.en);
-		keys[2] = findViewById(R.id.ike);
-		keys[3] = findViewById(R.id.jan);
-		keys[4] = findViewById(R.id.kama);
-		keys[5] = findViewById(R.id.la);
-		keys[6] = findViewById(R.id.ma);
-		keys[7] = findViewById(R.id.nimi);
-		keys[8] = findViewById(R.id.o);
-		keys[9] = findViewById(R.id.pi);
-		keys[10] = findViewById(R.id.sina);
-		keys[11] = findViewById(R.id.tawa);
-		keys[12] = findViewById(R.id.utala);
-		keys[13] = findViewById(R.id.wile);
+		for (int i = 0; i < 28; i++)
+		{
+			int resID = getResources().getIdentifier("btn" + i, "id", getContext().getPackageName());
+			keys[i] = (Button)findViewById(resID);
+		}
 		
-		keys[14] = findViewById(R.id.a);
-		keys[15] = findViewById(R.id.ala);
-		keys[16] = findViewById(R.id.e);
-		keys[17] = findViewById(R.id.li);
-		keys[18] = findViewById(R.id.mi);
-		keys[19] = findViewById(R.id.ni);
-		keys[20] = findViewById(R.id.pona);
-		keys[21] = findViewById(R.id.toki);
-		
-		keys[22] = findViewById(R.id.bracket);
-		keys[23] = findViewById(R.id.quote);
-		keys[24] = findViewById(R.id.dot);
-		keys[25] = findViewById(R.id.question);
-		keys[26] = findViewById(R.id.enter);
-		keys[27] = findViewById(R.id.delete);
-		
+		// sets repeat listener for delete key
 		setDeleteListener(keys[27]);
 		
 		// Set key listeners
@@ -506,37 +478,13 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 		}
 		
 		// Set the button strings
-		keyValues.put(R.id.ali, "a");
-		keyValues.put(R.id.en, "e");
-		keyValues.put(R.id.ike, "i");
-		keyValues.put(R.id.jan, "j");
-		keyValues.put(R.id.kama, "k");
-		keyValues.put(R.id.la, "l");
-		keyValues.put(R.id.ma, "m");
-		keyValues.put(R.id.nimi, "n");
-		keyValues.put(R.id.o, "o");
-		keyValues.put(R.id.pi, "p");
-		keyValues.put(R.id.sina, "s");
-		keyValues.put(R.id.tawa, "t");
-		keyValues.put(R.id.utala, "u");
-		keyValues.put(R.id.wile, "w");
+		String stringValues[] = {"a", "e", "i", "j", "k", "l", "m", "n", "o", "p", "s", "t", "u", "w", "a%", "ala%", "e%", "li%", "mi%", "ni%", "pona%", "toki%", "%[", "%.", "%\"", "%?", "%enter", "%delete"};
 		
-		keyValues.put(R.id.a, "a%");
-		keyValues.put(R.id.ala, "ala%");
-		keyValues.put(R.id.e, "e%");
-		keyValues.put(R.id.li, "li%");
-		keyValues.put(R.id.mi, "mi%");
-		keyValues.put(R.id.ni, "ni%");
-		keyValues.put(R.id.pona, "pona%");
-		keyValues.put(R.id.toki, "toki%");
-		
-		keyValues.put(R.id.bracket, "%[");
-		keyValues.put(R.id.dot, "%.");
-		keyValues.put(R.id.quote, "%\"");
-		keyValues.put(R.id.question, "%?");
-		keyValues.put(R.id.enter, "%enter");
-		
-		keyValues.put(R.id.delete, "%delete");
+		for (int i = 0; i < 28; i++)
+		{
+			int resID = getResources().getIdentifier("btn" + i, "id", getContext().getPackageName());
+			keyValues.put(resID, stringValues[i]);
+		}
 	}
 	
 	public void setEditorInfo(EditorInfo ei)

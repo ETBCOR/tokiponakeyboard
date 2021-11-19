@@ -478,7 +478,7 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 		}
 		
 		// Set the button strings
-		String stringValues[] = {"a", "e", "i", "j", "k", "l", "m", "n", "o", "p", "s", "t", "u", "w", "a%", "ala%", "e%", "li%", "mi%", "ni%", "pona%", "toki%", "%[", "%.", "%\"", "%?", "%enter", "%delete"};
+		String stringValues[] = {"a", "e", "i", "j", "k", "l", "m", "n", "o", "p", "s", "t", "u", "w", "a%", "ala%", "e%", "li%", "mi%", "ni%", "pona%", "toki%", "%[", "%\"", "%.", "%?", "%enter", "%delete"};
 		
 		for (int i = 0; i < 28; i++)
 		{

@@ -227,24 +227,24 @@ public class MyKeyboard extends MyKeyboardAbstract
 				{
 					
 					// Special key followed by normal key
-					if (startKey.equals("%enter"))
-					{
-						
-						// Switch subtype
-						finishAction("finish");
-						if ("aeijklmnopstuwAEIJKLMNOPSTUW".contains(getPreviousCharacter()))
-						{
-							write(" ");
-						}
-						inputMethodService.cycleMode();
-						
-						
-					}
-					else
-					{
+//					if (startKey.equals("%enter"))
+//					{
+//
+//						// Switch subtype
+//						finishAction("finish");
+//						if ("aeijklmnopstuwAEIJKLMNOPSTUW".contains(getPreviousCharacter()))
+//						{
+//							write(" ");
+//						}
+//						inputMethodService.cycleMode();
+//
+//
+//					}
+//					else
+//					{
 						action(startKey, null);
 						action(endKey, null);
-					}
+//					}
 					
 				}
 				else
